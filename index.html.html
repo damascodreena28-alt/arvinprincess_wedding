@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvin & Princess Wedding</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sage: #8b9467;
+            --cream: #f9f7f2;
+            --dark-text: #4a4a4a;
+            --gold: #b5a642;
+            --tan: #d2b48c;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--cream);
+            color: var(--dark-text);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0; padding: 0; text-align: center;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky; top: 0; background: rgba(255, 255, 255, 0.95);
+            padding: 12px 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        nav a {
+            text-decoration: none; color: var(--sage);
+            margin: 0 8px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
+        }
+
+        .container { max-width: 600px; margin: 0 auto; padding: 0 20px 40px 20px; }
+
+        header { padding: 50px 0 20px 0; }
+        h1 { font-family: 'Great Vibes', cursive; font-size: 3.5rem; color: var(--sage); margin: 0; }
+        .hashtag { color: var(--gold); letter-spacing: 2px; font-size: 0.9rem; margin: 10px 0; font-weight: bold; }
+
+        .calendar-card { background: white; padding: 25px; border-radius: 10px; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .calendar-month { font-family: 'Cinzel', serif; font-size: 1.2rem; margin-bottom: 15px; color: var(--sage); }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; max-width: 280px; margin: 0 auto; }
+        .day { padding: 8px 0; font-size: 0.8rem; }
+        .wedding-day { background-color: var(--sage); color: white; border-radius: 50%; font-weight: bold; }
+        .day-name { font-weight: bold; color: var(--tan); font-size: 0.65rem; padding-bottom: 10px; }
+
+        .countdown-section { background-color: var(--sage); color: white; padding: 25px 0; margin: 30px -20px; }
+        .timer-unit { display: inline-block; margin: 0 10px; }
+        .timer-unit div { font-family: 'Cinzel', serif; font-size: 1.6rem; }
+        .timer-unit span { font-size: 0.6rem; text-transform: uppercase; opacity: 0.8; }
+
+        .card { background: white; padding: 35px 25px; margin-bottom: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .section-title { font-family: 'Cinzel', serif; color: var(--sage); font-size: 1.3rem; letter-spacing: 2px; margin-bottom: 20px; }
+        .section-title::after { content: ''; display: block; width: 30px; height: 1px; background: var(--sage); margin: 8px auto; }
+
+        .entourage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 15px; }
+        .role-title { font-weight: 600; color: var(--sage); font-size: 0.7rem; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 1px; }
+        .name-item { font-size: 0.85rem; margin-bottom: 4px; line-height: 1.4; }
+
+        .swatch-container { display: flex; justify-content: center; gap: 10px; margin-top: 15px; }
+        .swatch { width: 35px; height: 35px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+        .rsvp-card { background: var(--sage); color: white; padding: 40px 20px; border-radius: 10px; }
+        .btn-rsvp {
+            background-color: white; color: var(--sage); padding: 15px 30px;
+            text-decoration: none; border-radius: 30px; display: inline-block;
+            margin-top: 20px; font-weight: bold; font-size: 0.85rem; letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        hr { border: 0; border-top: 1px solid #f2f2f2; margin: 20px 0; }
+        footer { padding: 30px 0; font-size: 0.7rem; opacity: 0.5; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#schedule">Schedule</a>
+    <a href="#entourage">Entourage</a>
+    <a href="#dresscode">Dress Code</a>
+    <a href="#rsvp">RSVP</a>
+</nav>
+
+<div class="container">
+    <header>
+        <h1>Arvin & Princess</h1>
+        <p class="hashtag">#ArvingetshisPrincess</p>
+        
+        <div class="calendar-card">
+            <div class="calendar-month">JANUARY 2026</div>
+            <div class="calendar-grid">
+                <div class="day-name">S</div><div class="day-name">M</div><div class="day-name">T</div><div class="day-name">W</div><div class="day-name">T</div><div class="day-name">F</div><div class="day-name">S</div>
+                <div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day">1</div><div class="day">2</div><div class="day">3</div>
+                <div class="day">4</div><div class="day">5</div><div class="day">6</div><div class="day">7</div><div class="day">8</div><div class="day">9</div><div class="day">10</div>
+                <div class="day">11</div><div class="day">12</div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day">16</div><div class="day">17</div>
+                <div class="day">18</div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day">23</div><div class="day wedding-day">24</div>
+                <div class="day">25</div><div class="day">26</div><div class="day">27</div><div class="day">28</div><div class="day">29</div><div class="day">30</div><div class="day">31</div>
+            </div>
+        </div>
+    </header>
+
+    <section id="schedule" class="countdown-section">
+        <p style="font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 10px;">DAYS UNTIL WE SAY I DO</p>
+        <div id="timer">
+            <div class="timer-unit"><div id="days">00</div><span>Days</span></div>
+            <div class="timer-unit"><div id="hours">00</div><span>Hours</span></div>
+            <div class="timer-unit"><div id="mins">00</div><span>Mins</span></div>
+            <div class="timer-unit"><div id="secs">00</div><span>Secs</span></div>
+        </div>
+    </section>
+
+    <section id="entourage" class="card">
+        <h2 class="section-title">The Entourage</h2>
+        
+        <div class="entourage-grid">
+            <div>
+                <p class="role-title">Groom's Parents</p>
+                <div class="name-item">Mr. Victor M. Brosola</div>
+                <div class="name-item">Mrs. Mernalyn T. Brosola</div>
+            </div>
+            <div>
+                <p class="role-title">Bride's Parents</p>
+                <div class="name-item">Mr. Dante H. Samson</div>
+                <div class="name-item">Mrs. Maritess M. Samson</div>
+            </div>
+        </div>
+
+        <hr>
+        
+        <p class="role-title" style="margin-bottom: 15px;">Principal Sponsors</p>
+        <div class="entourage-grid">
+            <div style="text-align: right; border-right: 1px solid #eee; padding-right: 10px;">
+                <div class="name-item">Mr. Ronel Pitas</div>
+                <div class="name-item">Mr. Jenifer Talania</div>
+                <div class="name-item">Mr. Regie Guillermo</div>
+                <div class="name-item">Mr. Raymond Dela Cruz</div>
+                <div class="name-item">Mr. Medardo Guillermo</div>
+                <div class="name-item">Mr. Jaime Eslabon</div>
+            </div>
+            <div style="text-align: left; padding-left: 10px;">
+                <div class="name-item">Mrs. Mercedes Unida</div>
+                <div class="name-item">Mrs. Edna Asuncion</div>
+                <div class="name-item">Mrs. Gina Batang</div>
+                <div class="name-item">Mrs. Nirvana Bides</div>
+                <div class="name-item">Mrs. Geraldine Reynon</div>
+                <div class="name-item">Ms. Mariel Joy Mende</div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="entourage-grid">
+            <div><p class="role-title">Best Man</p><div class="name-item">Mark Guillermo</div></div>
+            <div><p class="role-title">Maid of Honor</p><div class="name-item">Alaisa Brosola</div></div>
+        </div>
+
+        <hr>
+        <p class="role-title">Secondary Sponsors</p>
+        <div class="entourage-grid">
+            <div><p class="role-title">Candle</p><div class="name-item">Jean Loyd Uberita</div><div class="name-item">Lovely Talaña</div></div>
+            <div><p class="role-title">Veil</p><div class="name-item">Justine Talaña</div><div class="name-item">Tricia Tañeza</div></div>
+            <div style="grid-column: span 2;"><p class="role-title">Cord</p><div class="name-item">Tristhan Tañeza</div><div class="name-item">Hannah Talaña</div></div>
+        </div>
+
+        <hr>
+        <div class="entourage-grid">
+            <div>
+                <p class="role-title">Groomsmen</p>
+                <div class="name-item">Justine Talaña</div>
+                <div class="name-item">Tristhan Tañeza</div>
+                <div class="name-item">Jean Loyd Uberita</div>
+            </div>
+            <div>
+                <p class="role-title">Bridesmaids</p>
+                <div class="name-item">Lovely Talaña</div>
+                <div class="name-item">Tricia Tañeza</div>
+                <div class="name-item">Hanna Talaña</div>
+            </div>
+        </div>
+
+        <hr>
+        <div class="entourage-grid">
+            <div><p class="role-title">Ring Bearer</p><div class="name-item">Roderick Uberita</div></div>
+            <div><p class="role-title">Coin Bearer</p><div class="name-item">Yane Crizette Javier</div></div>
+        </div>
+    </section>
+
+    <section id="dresscode" class="card">
+        <h2 class="section-title">Dress Code</h2>
+        <p><strong>SEMI-FORMAL ATTIRE</strong><br><small>Classic & Elegant</small></p>
+        <div class="swatch-container">
+            <div class="swatch" style="background:#8b9467"></div>
+            <div class="swatch" style="background:#d2b48c"></div>
+            <div class="swatch" style="background:#556b2f"></div>
+            <div class="swatch" style="background:#f5f5dc"></div>
+        </div>
+    </section>
+
+    <div class="card">
+        <h2 class="section-title">Gentle Reminders</h2>
+        <div style="font-size: 0.8rem; text-align: left;">
+            <p><strong>Adults Only:</strong> We request an adults-only reception to allow everyone to celebrate freely.</p>
+            <p><strong>Unplugged Ceremony:</strong> Please keep phones away during the ceremony so we can see your faces, not your screens.</p>
+            <p><strong>Gifts:</strong> Your presence is enough, but if you wish to give, a monetary gift to help us start our home would be cherished.</p>
+        </div>
+    </div>
+
+    <section id="rsvp" class="rsvp-card">
+        <h2 style="font-family: 'Cinzel', serif; letter-spacing: 2px; margin: 0;">R.S.V.P</h2>
+        <p style="font-family: 'Great Vibes', cursive; font-size: 1.8rem; margin: 10px 0;">See you there!</p>
+        <a href="https://form.jotform.com/260217709885466" target="_blank" class="btn-rsvp">CONFIRM ATTENDANCE</a>
+    </section>
+
+    <footer>
+        <p>ARVIN & PRINCESS • 01.24.2026</p>
+    </footer>
+</div>
+
+<script>
+    const weddingDate = new Date("Jan 24, 2026 15:00:00").getTime();
+    setInterval(function() {
+        const now = new Date().getTime();
+        const diff = weddingDate - now;
+        document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+        document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+        document.getElementById("mins").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+        document.getElementById("secs").innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
+    }, 1000);
+</script>
+
+</body>
+</html>
